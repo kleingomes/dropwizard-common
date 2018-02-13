@@ -55,7 +55,7 @@ public class CorrelationIdFilter implements RequestFilter {
 					}
 
 					@Override
-					public State onHeadersReceived(HttpResponseHeaders headers) throws Exception {
+					public State onHeadersReceived(HttpHeaders headers) throws Exception {
 						try {
 							mdc.forEach(MDC::put);
 							return asyncHandler.onHeadersReceived(headers);

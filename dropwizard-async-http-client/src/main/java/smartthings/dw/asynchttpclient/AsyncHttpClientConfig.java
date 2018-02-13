@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AsyncHttpClientConfig {
+
+    private DatadogReporterConfig datadogReporterConfig;
+
 	private Map<String, Object> properties = new HashMap<>();
 
 	public Map<String, Object> getProperties() {
@@ -13,4 +16,12 @@ public class AsyncHttpClientConfig {
 	public void setProperties(Map<String, Object> properties) {
 		this.properties = properties;
 	}
+
+    public DatadogReporterConfig getDatadogReporterConfig() {
+        return datadogReporterConfig;
+    }
+
+    public void setDatadogReporterConfig(DatadogReporterConfig datadogReporterConfig) {
+        this.datadogReporterConfig = datadogReporterConfig;
+    }
 }

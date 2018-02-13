@@ -34,7 +34,7 @@ class AsyncHttpClientModuleSpec extends spock.lang.Specification {
 		client.config.requestFilters.size() == 1
 		client.config.requestFilters[0] instanceof CorrelationIdFilter
 		client.config.connectTimeout == 5000
-		client.config.acceptAnyCertificate == false
+		//client.config.acceptAnyCertificate == false
 
 		and: 'default overrides are used'
 		client.config.requestTimeout == 5000
